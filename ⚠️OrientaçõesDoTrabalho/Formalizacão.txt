@@ -19,7 +19,7 @@ Exemplo: MinhaClasse, UsuarioModel
 Exemplo: minha_variavel, calcular_idade
 📍 Usado em: Python (padrão do PEP8 para variáveis e funções), C (nomes de funções e variáveis globais).
 
-🔹 4. SCREAMING_SNAKE_CASE
+🔹 4. SCREAMING_SNAKE_CASE 
 
 👉 Igual ao snake_case, mas em MAIÚSCULAS.
 Exemplo: VALOR_MAXIMO, CONFIG_PADRAO
