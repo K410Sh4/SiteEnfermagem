@@ -1,0 +1,44 @@
+
+⚠️⚠️A que nós usaremos será a camelCase que é a recomendada para Javascript mas abaixo citei outras caso estejam curiosos e tals.⚠️⚠️
+
+1. camelCase
+
+👉 Primeira palavra começa minúscula, e as seguintes com inicial maiúscula.
+Exemplo: minhaVariavel, calcularIdade
+📍 Usado em: JavaScript, Java, C# (variáveis e funções).
+
+🔹 2. PascalCase (UpperCamelCase)
+
+👉 Todas as palavras começam com inicial maiúscula.
+Exemplo: MinhaClasse, UsuarioModel
+📍 Usado em: Java, C#, TypeScript (nomes de classes, interfaces, construtores).
+
+🔹 3. snake_case
+
+👉 Palavras em minúsculo, separadas por _.
+Exemplo: minha_variavel, calcular_idade
+📍 Usado em: Python (padrão do PEP8 para variáveis e funções), C (nomes de funções e variáveis globais).
+
+🔹 4. SCREAMING_SNAKE_CASE
+
+👉 Igual ao snake_case, mas em MAIÚSCULAS.
+Exemplo: VALOR_MAXIMO, CONFIG_PADRAO
+📍 Usado em: constantes em muitas linguagens (C, Java, Python).
+
+🔹 5. kebab-case
+
+👉 Palavras em minúsculo, separadas por -.
+Exemplo: minha-variavel, pagina-inicial
+📍 Usado em: URLs, nomes de arquivos, CSS classes/IDs (.botao-vermelho).
+
+🔹 6. Train-Case
+
+👉 Igual ao kebab-case, mas com iniciais maiúsculas.
+Exemplo: Minha-Variavel, Pagina-Inicial
+📍 Pouco usado, aparece mais em títulos formatados ou documentações.
+
+🔹 7. Hungarian Notation (menos usado hoje)
+
+👉 Prefixa a variável com uma letra indicando o tipo.
+Exemplo: strNome, intIdade, btnSalvar
+📍 Era usado em C e C++ antigos, hoje está meio “fora de moda”.
