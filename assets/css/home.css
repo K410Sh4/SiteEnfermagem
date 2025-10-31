@@ -1,8 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    font-size: 2vw;
-    color: rgb(0, 32, 177);
+    color: rgb(255, 255, 255);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
 }
@@ -11,10 +10,13 @@ html{
     justify-items: center;
 }
 body{
-    width: 90%;
+    width: 100%;
     justify-content: center;
     justify-items: center;
-    background-color: rgba(0, 225, 255, 0.897);
+    background: url(/assets/imagens/home/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
 header{
     margin-top: 1vw;
@@ -69,27 +71,41 @@ header{
 }
 .header-element#middle{
 }
-#content-middle-1{
-    animation: brilho 2s infinite ;
+#frame-middle-1{
+    background: linear-gradient(0.45turn, rgba(0, 0, 0, 0), rgba(255, 0, 0, 0.692));
+    padding: 1vw;
+    margin-top: -1vw;
+    border-radius: 3vw;
+    animation: brilho 5s infinite;
     transition: 500ms;
+}
+#content-middle-1{
+    animation: brilho2 5s infinite ;
 }
 @keyframes brilho{
     0%{
-        background: linear-gradient(0.45turn, rgba(0, 0, 0, 0), white);
-        transition: 500ms;
-    }
-    25%{
-        background: linear-gradient(-0.45turn, rgba(0, 0, 0, 0), white);
-        transition: 500ms;
-    }
-    50%{
-        background: linear-gradient(0.90turn, rgba(0, 0, 0, 0), white);
-        transition: 500ms;
+        transform: rotate(-360deg);
+        transition: 100ms;
     }
     100%{
-        background: linear-gradient(-0.90turn, rgba(0, 0, 0, 0), white);
-        transition: 500ms;
+        transform: rotate(0deg);
+        transition: 100ms;
     }
+}
+@keyframes brilho2{
+    0%{
+        transform: rotate(0deg);
+        transition: 100ms;
+    }
+    100%{
+        transform: rotate(-360deg);
+        transition: 100ms;
+    }
+}
+#frame-middle-1:hover{
+    cursor: pointer;
+    box-shadow: -0.1vw -0.1vw black;
+    transition: 500ms;
 }
 .header-element#right{
     justify-content: center;
@@ -161,4 +177,53 @@ header{
     opacity: 0;
     border: 1px solid black;
     transition: 300ms;
+}
+main{
+    margin-top: 5vw;
+    width: 90%;
+    height: 30rem;
+    padding: 2vw 0vw;
+    justify-content: center;
+    justify-items: center;
+    display: row;
+    background: rgba(255, 255, 255, 0.267);
+    border-radius: 1vw;
+    border: 1px solid black;
+}
+#banner-content{
+    justify-content: center;
+    justify-items: center;
+}
+#banner-frame{
+    width: 70%;
+    margin-top: 2vw;
+    font-size: 1.3vw;
+}
+#banner-apresentation{
+    margin-top: 4vw;
+}
+#disk-frame{
+    margin-top: 4vw;
+    border-radius: 1vw;
+    width: 90%;
+    display: flex;
+    background: rgba(0, 0, 0, 0.253);
+}
+.part-frame{
+    width: 50%;
+    justify-content: center;
+    justify-items: center;
+}
+#frame-main{
+    border: 1px solid black;
+    width: 90%;
+    height: auto;
+}
+#content-main-left-1, #doctor{
+    width: 70%;
+    margin-top: 4vw;
+    font-size: 1vw;
+}
+#doctor{
+    border: 1px solid black;
 }
