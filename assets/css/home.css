@@ -19,11 +19,14 @@ body{
     
 }
 header{
-    margin-top: 1vw;
+    margin-top: 0vw;
+    padding: 2vw;
+    background: linear-gradient( rgba(255, 0, 0, 0.692),rgba(12, 73, 187, 0));
 }
 .header-frame{
     width: 100%;
     height: 3vw;
+    background-size: cover;
 }
 .header-content{
     width: 100%;
@@ -58,29 +61,48 @@ header{
     height: 0px;
     width: 100%;
     opacity: 1;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     transition: 300ms;
+}
+.logo-name{
+    text-shadow: 0.1vw 0.1vw black;
+}
+#logo-name-back{
+    position: relative;
+    opacity: 0;
+    top: -3vw;
+}
+#click-save{
+    cursor: pointer;
+    opacity: 1;
+}
+#content-left-1:hover ~ #click-save{
+    cursor: pointer;
+    opacity: 0;
+}
+#content-left-1:hover ~ #logo-name-back{
+    opacity: 1;
 }
 .header-element#middle{
     justify-content: center;
     justify-items: center;
 }
-#logo1{
+#logo-1{
     width: 3vw;
     height: 3vw;
 }
 .header-element#middle{
 }
 #frame-middle-1{
-    background: linear-gradient(0.45turn, rgba(0, 0, 0, 0), rgba(255, 0, 0, 0.692));
+    background: linear-gradient(0.45turn, rgba(0, 204, 255, 0.719), rgb(164, 237, 255));
     padding: 1vw;
     margin-top: -1vw;
     border-radius: 3vw;
-    animation: brilho 5s infinite;
-    transition: 500ms;
+    animation: brilho 2s infinite;
+    transition: 100ms;
 }
 #content-middle-1{
-    animation: brilho2 5s infinite ;
+    animation: brilho2 2s infinite ;
 }
 @keyframes brilho{
     0%{
@@ -104,7 +126,7 @@ header{
 }
 #frame-middle-1:hover{
     cursor: pointer;
-    box-shadow: -0.1vw -0.1vw black;
+    box-shadow: -0.1vw -0.1vw rgb(0, 217, 255);
     transition: 500ms;
 }
 .header-element#right{
@@ -132,14 +154,14 @@ header{
     height: 0px;
     width: 100%;
     opacity: 1;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     transition: 300ms;
 }
 #selector-option-1{
     height: 0px;
     width: 0%;
     opacity: 0;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     transition: 300ms;
 }
 
@@ -150,14 +172,14 @@ header{
     height: 0px;
     width: 100%;
     opacity: 1;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     transition: 300ms;
 }
 #selector-option-2{
     height: 0px;
     width: 0%;
     opacity: 0;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     transition: 300ms;
 }
 
@@ -168,7 +190,7 @@ header{
     height: 0px;
     width: 100%;
     opacity: 1;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     transition: 300ms;
 }
 #selector-option-3{
@@ -186,13 +208,15 @@ main{
     justify-content: center;
     justify-items: center;
     display: row;
-    background: rgba(255, 255, 255, 0.267);
+    background: rgba(0, 0, 0, 0.267);
     border-radius: 1vw;
     border: 1px solid black;
 }
 #banner-content{
     justify-content: center;
     justify-items: center;
+    width: auto;
+    height: auto;
 }
 #banner-frame{
     width: 70%;
@@ -201,29 +225,167 @@ main{
 }
 #banner-apresentation{
     margin-top: 4vw;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    justify-items: center;
 }
+#banner-apresentation *{
+    width: auto;
+    justify-content: center;
+    justify-items: center;
+    word-break: break-all;
+    font-size: 1.5vw;
+   
+ }
 #disk-frame{
     margin-top: 4vw;
     border-radius: 1vw;
     width: 90%;
+    align-items: center;
     display: flex;
     background: rgba(0, 0, 0, 0.253);
+}
+#main-left-frame{
+    height: 100%;
+}
+#content-main-left-1{
+    height: 90%;
+    border: 1px solid black;
+    align-items: center;
+    align-content: center;
+}
+
+#main-right-content{
+    background: rgba(255, 0, 0, 0.082);
+    border-radius: 1vw;
+    width: 90%;
+    font-size: 1vw;
+    border: 1px solid;
+
 }
 .part-frame{
     width: 50%;
     justify-content: center;
     justify-items: center;
+  
+    padding: 1vw 1vw;
 }
 #frame-main{
     border: 1px solid black;
     width: 90%;
     height: auto;
 }
-#content-main-left-1, #doctor{
-    width: 70%;
-    margin-top: 4vw;
+#tittle-part-main{
+    margin: 1vw 0vw;
+}
+#tittle-part-main h1{
+    color: red;
+    background: rgba(0, 0, 0, 0.438);
+    padding: 1vw;
+    border-radius: 1vw;
+    border: 2px solid white;
+}
+.part-capsule{
+    width: 90%;  
+}
+.part-content{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    align-content: center;
+    background: rgba(255, 60, 0, 0.329);
+    border-radius: 10px;
+    margin-bottom: 1vw;
     font-size: 1vw;
 }
-#doctor{
-    border: 1px solid black;
+/* ------------------------------------------------------------------------------------ */
+
+
+#selection-content-1{
+    padding: 1vw 0vw;
 }
+#selection-content-1:hover{
+    cursor: pointer;
+     box-shadow: 0.1vw 0.1vw rgb(255, 0, 0);
+     transition: 400ms;
+}
+#image-part-1{
+    border-radius: 10px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.164), rgba(255, 255, 255, 0.151));
+}
+#tittle-part-1{
+    margin-left: 2vw;
+}
+.image-part{
+    width: 5vw;
+    margin-left: 10%;
+}
+#selection-content-1:hover ~#tittle-part-1{
+    width: 0vw;
+ 
+}
+
+
+/* ------------------------------------------------------------------------------------ */
+#selection-content-2{
+    padding: 1vw 0vw;
+}
+#selection-content-2:hover{
+    cursor: pointer;
+     box-shadow: 0.1vw 0.1vw rgb(255, 0, 0);
+     transition: 400ms;
+}
+#image-part-2{
+    border-radius: 10px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.164), rgba(255, 255, 255, 0.151));
+}
+#tittle-part-2{
+    margin-left: 2vw;
+}
+.image-part{
+    width: 5vw;
+    margin-left: 10%;
+}
+
+#selection-content-3{
+    padding: 1vw 0vw;
+}
+#selection-content-3:hover{
+    cursor: pointer;
+     box-shadow: 0.1vw 0.1vw rgb(255, 0, 0);
+     transition: 400ms;
+}
+#image-part-3{
+    border-radius: 10px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.164), rgba(255, 255, 255, 0.151));
+}
+#tittle-part-3{
+    margin-left: 2vw;
+}
+.image-part{
+    width: 5vw;
+    margin-left: 10%;
+}
+.part-content:hover~.tittle-part {
+    animation:alternate tremer 1s infinite;
+}
+@keyframes tremer{
+    0%{
+        transform: rotate(90deg);
+        transition: 300ms;
+    }
+    25%{
+        transform: rotate(-90deg);
+        transition: 250ms;
+    }
+    50%{
+        transform: rotate(45deg);
+        transition: 200ms;
+    }
+    100%{
+        transform: rotate(-45deg);
+        transition: 150ms;
+    }
+ }
