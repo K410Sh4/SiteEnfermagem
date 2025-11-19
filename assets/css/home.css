@@ -21,7 +21,7 @@ body{
 header{
     margin-top: 0vw;
     padding: 2vw;
-    background: linear-gradient( rgba(255, 0, 0, 0.692),rgba(12, 73, 187, 0));
+    background: linear-gradient( rgba(99, 93, 93, 0.692),rgba(12, 73, 187, 0));
 }
 .header-frame{
     width: 100%;
@@ -47,14 +47,35 @@ header{
     justify-content: center;
     justify-items: center;
 }
-#content-left-1:hover{
+#frame-left{
+    margin-left: 2vw;
+    width: 20vw;
+}
+#content-left-1{
+    display: flex;
     cursor: pointer;
 }
+#content-left-1:hover #thelife{
+    opacity: 1;
+    transform: translate(0vw);
+    transition: 1s;
+}
+#click-save-logo{
+    width: 9vw;
+}
+#click-save-logo p{
+    opacity: 0;
+}
+#thelife{
+    opacity: 0;
+    transition: 500ms;
+    transform: translate(-10vw);
+}
+
 #selector-tittle{
     height: 0px;
     width: 0px;
     opacity: 0;
-    border: 1px solid black;
     transition: 300ms;
 }
 #content-left-1:hover ~ #selector-tittle{
@@ -238,6 +259,9 @@ main{
     font-size: 1.5vw;
    
  }
+.option-carrossel{
+    
+}
 #disk-frame{
     margin-top: 4vw;
     border-radius: 1vw;
@@ -280,7 +304,7 @@ main{
     margin: 1vw 0vw;
 }
 #tittle-part-main h1{
-    color: red;
+    color: rgb(255, 0, 0);
     background: rgba(0, 0, 0, 0.438);
     padding: 1vw;
     border-radius: 1vw;
@@ -295,7 +319,7 @@ main{
     justify-content: start;
     align-items: center;
     align-content: center;
-    background: rgba(255, 60, 0, 0.329);
+    background: rgba(0, 225, 255, 0.329);
     border-radius: 10px;
     margin-bottom: 1vw;
     font-size: 1vw;
@@ -308,7 +332,7 @@ main{
 }
 #selection-content-1:hover{
     cursor: pointer;
-     box-shadow: 0.1vw 0.1vw rgb(255, 0, 0);
+     box-shadow: 0.1vw 0.1vw rgba(0, 183, 255, 0.445);
      transition: 400ms;
 }
 #image-part-1{
@@ -334,7 +358,7 @@ main{
 }
 #selection-content-2:hover{
     cursor: pointer;
-     box-shadow: 0.1vw 0.1vw rgb(255, 0, 0);
+     box-shadow: 0.1vw 0.1vw rgb(0, 174, 255);
      transition: 400ms;
 }
 #image-part-2{
@@ -354,7 +378,7 @@ main{
 }
 #selection-content-3:hover{
     cursor: pointer;
-     box-shadow: 0.1vw 0.1vw rgb(255, 0, 0);
+     box-shadow: 0.1vw 0.1vw rgb(0, 247, 255);
      transition: 400ms;
 }
 #image-part-3{
