@@ -54,6 +54,7 @@ header{
 #content-left-1{
     display: flex;
     cursor: pointer;
+    border: 1px solid black;
 }
 #content-left-1:hover #thelife{
     opacity: 1;
@@ -97,28 +98,33 @@ header{
     cursor: pointer;
     opacity: 1;
 }
-#content-left-1:hover ~ #click-save{
-    cursor: pointer;
+.h-left-frame:hover ~ #click-save{
     opacity: 0;
+    background: black;
 }
-#content-left-1:hover ~ #logo-name-back{
+.h-left-frame:hover ~ #logo-name-back{
     opacity: 1;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
 }
 .header-element#middle{
     justify-content: center;
     justify-items: center;
 }
-#logo-1{
-    width: 3vw;
-    height: 3vw;
+#logo1{
+    width: 5vw;
+    height: 5vw;
 }
 .header-element#middle{
 }
 #frame-middle-1{
     background: linear-gradient(0.45turn, rgba(0, 204, 255, 0.719), rgb(164, 237, 255));
-    padding: 1vw;
-    margin-top: -1vw;
-    border-radius: 3vw;
+    padding: 2vw;
+    width: 5vw;
+    height: 5vw;
+    margin-top: -2vw;
+    border-radius: 10vw;
     animation: brilho 2s infinite;
     transition: 100ms;
 }
