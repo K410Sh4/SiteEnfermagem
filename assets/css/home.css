@@ -10,7 +10,7 @@ html{
     justify-items: center;
 }
 body{
-    width: 100%;
+    width: 90%;
     justify-content: center;
     justify-items: center;
     background: url(/assets/imagens/home/background.png);
@@ -20,21 +20,23 @@ body{
 }
 header{
     margin-top: 0vw;
-    padding: 2vw;
+    padding: 1vw;
     background: linear-gradient( rgba(99, 93, 93, 0.692),rgba(12, 73, 187, 0));
 }
 .header-frame{
     width: 100%;
-    height: 3vw;
+    height: 100%;
     background-size: cover;
 }
 .header-content{
     width: 100%;
     height: 100%;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .header-element{
-    width: 33%;
+    width: 30%;
     height: 100%;
 }
 .header-element *{
@@ -46,15 +48,18 @@ header{
 .header-element#left{
     justify-content: center;
     justify-items: center;
+    width: auto;
+    margin-left: -9vw;
 }
 #frame-left{
-    margin-left: 2vw;
-    width: 20vw;
+    margin-top: 0.5vw;
+    width: auto;
 }
 #content-left-1{
     display: flex;
     cursor: pointer;
     width: 100%;
+    margin-left: 0vw;
 }
 #content-left-1:hover #thelife{
     opacity: 1;
@@ -62,8 +67,8 @@ header{
     transition: 1s;
 }
 #click-save-logo{
-    width: 9vw;
-    font-size: 1.5vw;
+    
+    font-size: 2vw;
 }
 #click-save-logo p{
     opacity: 0;
@@ -71,8 +76,9 @@ header{
 #thelife{
     opacity: 0;
     transition: 500ms;
+    margin-left: 1vw;
     transform: translate(-10vw);
-    font-size: 0.8vw;
+    font-size: 1vw;
 }
 
 #selector-tittle{
@@ -111,8 +117,10 @@ header{
     border: 1px solid black;
 }
 .header-element#middle{
+    width: auto;
+    height: auto;
     justify-content: center;
-    justify-items: center;
+    justify-items: center;border: 1px solid black;
 }
 #logo1{
     width: 200%;
@@ -122,11 +130,10 @@ header{
 }
 
 #frame-middle-1{
-    background: linear-gradient(0.45turn, rgba(255, 0, 0, 0.568), rgba(0, 0, 0, 0.521));
+    background: linear-gradient(0.45turn, rgba(0, 255, 145, 0.568), rgba(6, 175, 170, 0.521));
     padding: 2vw;
     width: 2vw;
     height: 2vw;
-    margin-top: -2vw;
     border-radius: 10vw;
     animation: brilho 2s infinite;
     transition: 100ms;
@@ -164,20 +171,30 @@ header{
 .header-element#right{
     justify-content: center;
     justify-items: center;
+    width: 40%;
+    height: 100%;
 }
 .menu-content{
     width: 100%;
+    height: auto;
     display: flex;
     justify-content: space-around;
 }
+.button{
+    justify-content: center;
+    justify-items: center;
+}
 .option-menu{
-    font-size: 1vw;
+    font-size: 2vw;
     width: auto;
-    height: 1.5vw;
+    height: auto;
     padding: 0vw 1vw;
     margin: 0vw 1vw;
     background: none;
     border: none;
+}
+.selector{
+    margin-top: 0.5vw;
 }
 #option-menu-1:hover{
     cursor: pointer;
@@ -233,7 +250,7 @@ header{
     transition: 300ms;
 }
 main{
-    margin-top: 5vw;
+    margin-top: 0vw;
     width: 90%;
     height: 30rem;
     padding: 2vw 0vw;
@@ -290,16 +307,26 @@ main{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  }
  #banner-content{
-    background: rgba(255, 255, 255, 0.384);
-    border: 5px solid black;
+    background: rgba(246, 233, 233, 0.384);
+    border: 2px solid black;
     align-items: center;
     align-content: space-between;
     height: auto;
+    padding: 1vw;
+    margin: 2vw 0vw;
  }
  #banner-frame{
-    background: rgba(255, 255, 255, 0.384);
+    background: rgba(0, 255, 145, 0.384);
     border: 2px solid rgb(146, 146, 146);
     padding: auto;
+    padding: 2vw;
+ }
+ #banner-tittle{
+    display: flex;
+ }
+ #help{
+    width: 4vw;
+    margin-right: 2vw;
  }
  .options-frame{
     align-items: center;
@@ -361,7 +388,7 @@ main{
 }
 
 #main-right-content{
-    background: rgba(255, 0, 0, 0.082);
+    background: rgba(137, 0, 0, 0.721);
     border-radius: 1vw;
     width: 90%;
     font-size: 1vw;
@@ -399,7 +426,7 @@ main{
     justify-content: start;
     align-items: center;
     align-content: center;
-    background: rgba(0, 225, 255, 0.329);
+    background: rgba(248, 218, 69, 0.329);
     border-radius: 10px;
     margin-bottom: 1vw;
     font-size: 1vw;
@@ -412,12 +439,11 @@ main{
 }
 #selection-content-1:hover{
     cursor: pointer;
-     box-shadow: 0.1vw 0.1vw rgba(0, 183, 255, 0.445);
+     box-shadow: 0.1vw 0.1vw rgba(0, 0, 0, 0.445);
      transition: 400ms;
 }
 #image-part-1{
-    border-radius: 10px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.164), rgba(255, 255, 255, 0.151));
+    
 }
 #tittle-part-1{
     margin-left: 2vw;
@@ -438,12 +464,12 @@ main{
 }
 #selection-content-2:hover{
     cursor: pointer;
-     box-shadow: 0.1vw 0.1vw rgb(0, 174, 255);
+     box-shadow: 0.1vw 0.1vw rgb(0, 0, 0);
      transition: 400ms;
 }
 #image-part-2{
-    border-radius: 10px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.164), rgba(255, 255, 255, 0.151));
+    border-radius: 90px;
+    
 }
 #tittle-part-2{
     margin-left: 2vw;
@@ -458,12 +484,12 @@ main{
 }
 #selection-content-3:hover{
     cursor: pointer;
-     box-shadow: 0.1vw 0.1vw rgb(0, 247, 255);
+     box-shadow: 0.1vw 0.1vw rgb(0, 0, 0);
      transition: 400ms;
 }
 #image-part-3{
-    border-radius: 10px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.164), rgba(255, 255, 255, 0.151));
+    border-radius: 90px;
+    
 }
 #tittle-part-3{
     margin-left: 2vw;
