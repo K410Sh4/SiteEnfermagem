@@ -120,7 +120,7 @@ header{
     width: auto;
     height: auto;
     justify-content: center;
-    justify-items: center;border: 1px solid black;
+    justify-items: center;
 }
 #logo1{
     width: 200%;
@@ -284,8 +284,10 @@ main{
     align-content: center;
     justify-content: center;
     justify-items: center;
-    height: 33%;
+    margin: 1vw 0vw;
+    
     border: 2px solid black;
+    border-radius: 10px;
 }
 #banner-apresentation *{
     width: auto;
@@ -318,9 +320,8 @@ main{
  #banner-frame{
     background: rgba(0, 255, 145, 0.384);
     border: 2px solid rgb(146, 146, 146);
-    padding: auto;
     padding: 2vw;
- }
+}
  #banner-tittle{
     display: flex;
  }
@@ -332,7 +333,7 @@ main{
     align-items: center;
     align-content: center;
     justify-content: space-around;
-    margin: 1vw 0vw;
+    margin: 0vw 0vw;
     width: 10vw;
     height: 3vw;
     display: flex;
@@ -347,6 +348,7 @@ main{
     border: 3px solid black;
     width: 1vw;
     height: 1vw;
+    transition: 1s;
  }
  .arrow-icon{
     width: 2vw;
@@ -433,6 +435,12 @@ main{
 }
 /* ------------------------------------------------------------------------------------ */
 
+.item-carrossel:hover{
+   cursor: pointer;
+   border-radius: 10px;
+   border: 1px solid rgb(255, 255, 255);
+   background: rgba(0, 0, 0, 0.23); 
+}
 
 #selection-content-1{
     padding: 1vw 0vw;
@@ -441,9 +449,6 @@ main{
     cursor: pointer;
      box-shadow: 0.1vw 0.1vw rgba(0, 0, 0, 0.445);
      transition: 400ms;
-}
-#image-part-1{
-    
 }
 #tittle-part-1{
     margin-left: 2vw;
@@ -454,7 +459,6 @@ main{
 }
 #selection-content-1:hover ~#tittle-part-1{
     width: 0vw;
- 
 }
 
 
@@ -469,7 +473,6 @@ main{
 }
 #image-part-2{
     border-radius: 90px;
-    
 }
 #tittle-part-2{
     margin-left: 2vw;
