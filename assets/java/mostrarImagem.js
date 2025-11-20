@@ -13,6 +13,14 @@ const engasgotittle = document.querySelector("#banner-tittle-text-3");
 option1.style.background="white";
 option2.style.background="white";
 option3.style.background="white";
+function selecionarAnterior(){
+    option=option-1;
+    if(option=0){
+        option=3;
+    }
+    console.log("voceclicou");
+}
+back.addEventListener("click",selecionarAnterior);
 if(option==1){
     coracao.style.display="flex";
     coracaotittle.style.display="flex";
