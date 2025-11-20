@@ -54,7 +54,7 @@ header{
 #content-left-1{
     display: flex;
     cursor: pointer;
-    border: 1px solid black;
+    width: 100%;
 }
 #content-left-1:hover #thelife{
     opacity: 1;
@@ -63,6 +63,7 @@ header{
 }
 #click-save-logo{
     width: 9vw;
+    font-size: 1.5vw;
 }
 #click-save-logo p{
     opacity: 0;
@@ -71,6 +72,7 @@ header{
     opacity: 0;
     transition: 500ms;
     transform: translate(-10vw);
+    font-size: 0.8vw;
 }
 
 #selector-tittle{
@@ -113,22 +115,25 @@ header{
     justify-items: center;
 }
 #logo1{
-    width: 5vw;
-    height: 5vw;
+    width: 200%;
+    height: 200%;
+    margin-top: -1vw;
+    margin-left: -1vw;
 }
-.header-element#middle{
-}
+
 #frame-middle-1{
-    background: linear-gradient(0.45turn, rgba(0, 204, 255, 0.719), rgb(164, 237, 255));
+    background: linear-gradient(0.45turn, rgba(255, 0, 0, 0.568), rgba(0, 0, 0, 0.521));
     padding: 2vw;
-    width: 5vw;
-    height: 5vw;
+    width: 2vw;
+    height: 2vw;
     margin-top: -2vw;
     border-radius: 10vw;
     animation: brilho 2s infinite;
     transition: 100ms;
+    border: 1px solid black;
 }
 #content-middle-1{
+    
     animation: brilho2 2s infinite ;
 }
 @keyframes brilho{
@@ -242,20 +247,28 @@ main{
 #banner-content{
     justify-content: center;
     justify-items: center;
-    width: auto;
-    height: auto;
+    width: 70%;
+    border: 1px solid black;
 }
 #banner-frame{
     width: 70%;
     margin-top: 2vw;
     font-size: 1.3vw;
-}
-#banner-apresentation{
-    margin-top: 4vw;
-    width: auto;
-    height: auto;
     justify-content: center;
     justify-items: center;
+}
+#banner-tittle-top{
+    height: 33%;
+    align-content: center;
+}
+#banner-apresentation{
+    width: auto;
+    height: auto;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    height: 33%;
+    border: 2px solid black;
 }
 #banner-apresentation *{
     width: auto;
@@ -263,10 +276,71 @@ main{
     justify-items: center;
     word-break: break-all;
     font-size: 1.5vw;
-   
+    display: flex;
+    position: relative;
  }
-.option-carrossel{
+ .banner-tittle{
+    justify-content: center;
+    justify-items: center;
+ }
+ .banner-tittle-text{
+    font-size: 2vw;
+    margin: 1vw 0vw;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ #banner-content{
+    background: rgba(255, 255, 255, 0.384);
+    border: 5px solid black;
+    align-items: center;
+    align-content: space-between;
+    height: auto;
+ }
+ #banner-frame{
+    background: rgba(255, 255, 255, 0.384);
+    border: 2px solid rgb(146, 146, 146);
+    padding: auto;
+ }
+ .options-frame{
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    margin: 1vw 0vw;
+    width: 10vw;
+    height: 3vw;
+    display: flex;
+    padding: auto;
     
+ }
+ .options-frame{
+    align-items: center;
+ }
+ .option-circle{
+    border-radius: 1vw;
+    border: 3px solid black;
+    width: 1vw;
+    height: 1vw;
+ }
+ .arrow-icon{
+    width: 2vw;
+ }
+.banner-tittle *{
+    display: none;
+ }
+#carrossel-1{
+    width: 10vw;
+    margin-top: 0vw;
+    
+}
+#carrossel-2{
+    width: 10vw;
+    display: none;
+    margin-top: 0vw;
+}
+#carrossel-3{
+    width: 10vw;
+    display: none;
+    margin-top: 0vw;
 }
 #disk-frame{
     margin-top: 4vw;
