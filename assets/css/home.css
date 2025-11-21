@@ -252,7 +252,7 @@ header{
 main{
     margin-top: 0vw;
     width: 90%;
-    height: 30rem;
+    height: auto;
     padding: 2vw 0vw;
     justify-content: center;
     justify-items: center;

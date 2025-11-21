@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    
+
     <header class="header-frame">
         <section class="header-content">
             <div class="header-element" id="middle">
@@ -36,10 +36,10 @@
                     <div class="h-right-content" id="content-right-1">
                         <menu class="menu-content" id="menu-content-right">
                             <a href="/index.html">
-                            <div class="button">
-                                <button class="option-menu" id="option-menu-1">Home</button>
-                                <div class="selector" id="selector-option-1"></div>
-                            </div>
+                                <div class="button">
+                                    <button class="option-menu" id="option-menu-1">Home</button>
+                                    <div class="selector" id="selector-option-1"></div>
+                                </div>
                             </a>
                             <div class="button">
                                 <button class="option-menu" id="option-menu-2">Sobre</button>
@@ -56,37 +56,117 @@
         </section>
     </header>
     <main>
-        <section class="main" id="main-frame">
-            <div class="tittle-main">
+        <section id="main-frame">
+            <div id="tittle-main">
+                <img src="/assets/imagens/parada-cardiaca/paradacardiaca.png" alt="" id="img-main">
                 <h1>Parada cardiorespiratória</h1>
             </div>
-            <div class="content-media">
-                <video muted controls src="/assets/videos/paradacardiaca/videoplayback.mp4"></video>
-            </div>
-            <div class="info-frame">
-                <div class="info" id="info-frame-left">
-
-                </div>
-                <div class="info" id="info-frame-right">
-
-                </div>
-
-            </div>
-            <div class="info-footer">
-
+            <div id="content-media">
+                <video muted controls src="/assets/videos/paradacardiaca/videoplayback.mp4" id="video-main"></video>
             </div>
         </section>
+        <div class="main">
+            <div class="separator"></div>
+            <div class="line">
+                <img src="/assets/imagens/parada-cardiaca/firstaid.png" alt="" class="img">
+                <h1 class="tittle-cpr">Passo a passo Primeiros socorros</h1>
+            </div>
+            <section class="help" id="help-frame">
+                <div class="help-wrapper" id="card-help-1">
+                    <div class="tittle-help">
+                        <h1>1º passo</h1>
+                        <h2>Verificar a segurança e a resposta</h2>
+                    </div>
+                    <div class="image-help">
+                        <img src="/assets/imagens/parada-cardiaca/primeiropasso.png" alt="" class="img-cpr">
+                    </div>
+                    <div class="description-help">
+                        <ul>
+                            <h1>Certifique-se de que o local é seguro.</h1>
+                            <h1>Pergunte ao paciente se está bem e tente obter alguma reação.</h1>
+                        </ul>
+                    </div>
+                </div>
+                <div class="help-wrapper" id="card-help-2">
+
+                    <div class="tittle-help">
+                        <h1>2º passo</h1>
+                        <h2>Chamar Ajuda</h2>
+                    </div>
+                    <div class="image-help">
+                        <img src="/assets/imagens/parada-cardiaca/segundopasso.png" alt="" class="img-cpr">
+                    </div>
+                    <div class="description-help">
+                        <ul>
+                            <h1>Se a pessoa não responder, peça ajuda imediatamente.</h1>
+                            <h1>Ligue para o número de emergência local (como 192 no Brasil).</h1>
+                        </ul>
+                    </div>
+                </div>
+                <div class="help-wrapper" id="card-help-3">
+                    <div class="tittle-help">
+                        <h1>3º passo</h1>
+                        <h2>Avaliar Respiracao</h2>
+                    </div>
+                    <div class="image-help">
+                        <img src="/assets/imagens/parada-cardiaca/terceiropasso.png" alt="" class="img-cpr">
+                    </div>
+                    <div class="description-help">
+                        <ul>
+                            <h1>Abra a via aérea inclinando a cabeça e levantando o queixo.</h1>
+                            <h1>Verifique se a pessoa está respirando normalmente (não apenas ofegante).</h1>
+                            <h1>Se não respira ou respira de forma anormal, inicie a CPR.</h1>
+                        </ul>
+                    </div>
+                </div>
+                <div class="help-wrapper" id="card-help-4">
+                    <div class="tittle-help">
+                        <h1>4º passo</h1>
+                        <h2>Iniciar compressões torácicas</h2>
+                    </div>
+                    <div class="image-help">
+                        <img src="/assets/imagens/parada-cardiaca/quartopasso.png" alt="" class="img-cpr">
+                    </div>
+                    <div class="description-help">
+                        <ul>
+                            <h1>Posicione as mãos no centro do peito (esterno).</h1>
+                            <h1>Comprima 5–6 cm de profundidade, a uma frequência de 100–120 compressões por minuto.
+                            </h1>
+                            <h1>Deixe o peito retornar totalmente após cada compressão.</h1>
+                        </ul>
+                    </div>
+                </div>
+                <div class="help-wrapper" id="card-help-5">
+                    <div class="tittle-help">
+                        <h1>5º passo</h1>
+                        <h2>Ventilações e sequência contínua</h2>
+                    </div>
+                    <div class="image-help">
+                        <img src="/assets/imagens/parada-cardiaca/quintopasso.png" alt="" class="img-cpr">
+                    </div>
+                    <div class="description-help">
+                        <ul>
+                            <h1>Se souber fazer respiração boca-a-boca:
+                                2 ventilações após 30 compressões (proporção 30:2).</h1>
+                            <h1>Se não souber ou não quiser, continue apenas com compressões contínuas.</h1>
+                            <h1>Continue até a chegada de ajuda profissional ou até a pessoa recuperar a
+                                respiração/consciência.</h1>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
     <div vw class="enabled">
-  <div vw-access-button class="active"></div>
-  <div vw-plugin-wrapper>
-    <div class="vw-plugin-top-wrapper"></div>
-  </div>
-</div>
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
 
-<script>
-  new window.VLibras.Widget('https://vlibras.gov.br/app');
-</script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>
