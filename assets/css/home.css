@@ -291,22 +291,27 @@ main{
     justify-content: center;
     justify-items: center;
     display: row;
-    background: rgba(0, 0, 0, 0.267);
     border-radius: 1vw;
-    border: 1px solid black;
 }
 #banner-content{
     justify-content: center;
     justify-items: center;
     width: 70%;
-    border: 1px solid black;
 }
-#banner-frame{
-    width: 70%;
+#banner-frame {
+    width: 50%;
     margin-top: 2vw;
     font-size: 1.3vw;
     justify-content: center;
     justify-items: center;
+    background: rgba(255, 255, 255, 0.15); /* fundo transparente */
+    border: 2px solid rgb(146, 146, 146);
+    padding: 1vw;
+    border-radius: 1vw;
+
+    /* Efeito de vidro/desfoque */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* compatibilidade com Safari */
 }
 #banner-tittle-top{
     height: 33%;
@@ -361,6 +366,7 @@ main{
  }
  #help{
     width: 4vw;
+    height: 4vw;
     margin-right: 2vw;
  }
  .options-frame{
@@ -386,6 +392,9 @@ main{
  }
  .arrow-icon{
     width: 2vw;
+ }
+ #banner-tittle{
+    font-size: 1vw;
  }
 .banner-tittle *{
     display: none;
@@ -442,7 +451,6 @@ main{
     margin: 2vw 0vw;
 }
 #frame-main{
-    border: 1px solid black;
     width: 90%;
     height: auto;
 }
