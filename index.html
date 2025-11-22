@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/assets/imagens/home/logoazul.png" type="image/x-icon">
     <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <title>Click Save</title>
 </head>
@@ -99,27 +100,73 @@
         <div class="disk-save" id="disk-frame">
             <div class="part-frame" id="main-left-frame">
                 <div class="content" id="content-main-left-1">
+                    <div class="tittle-map">
+                        <img src="/assets/imagens/home/pingps.png" alt=""><h3>Sua localizacao</h3>
+                    </div>
+                    <div id="map"></div>
+                    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+                    <script>
+                        // cria mapa
+                        const map = L.map('map').setView([0, 0], 2);
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            maxZoom: 19,
+                        }).addTo(map);
+
+                        let marker;
+
+                        if ('geolocation' in navigator) {
+                            navigator.geolocation.watchPosition(pos => {
+                                const lat = pos.coords.latitude;
+                                const lng = pos.coords.longitude;
+
+                                if (!marker) {
+                                    marker = L.marker([lat, lng]).addTo(map)
+                                        .bindPopup("Você está aqui!").openPopup();
+                                    map.setView([lat, lng], 15);
+                                } else {
+                                    marker.setLatLng([lat, lng]);
+                                    map.setView([lat, lng]);
+                                }
+
+                                console.log(`Lat: ${lat}, Lng: ${lng}`);
+                            }, err => {
+                                alert("Erro ao obter localização: " + err.message);
+                            }, {
+                                enableHighAccuracy: true,
+                                maximumAge: 5000,
+                                timeout: 10000
+                            });
+                        } else {
+                            alert("Seu navegador não suporta geolocalização.");
+                        }
+                    </script>
 
                 </div>
             </div>
             <div class="part-frame" id="main-right-frame">
                 <div class="part-frame" id="main-right-content">
-                    <div class="tittle-part" id="tittle-part-main">
+                    <div class="tittle" id="tittle-part-main">
                         <h1>Números de emergência</h1>
                     </div>
                     <div class="part-capsule">
-                        <div class="part-content" id="selection-content-1">
-                            <img src="/assets/imagens/home/bombeiros.png" class="image-part" id="image-part-1">
-                            <h1 class="tittle-part" id="tittle-part-1">Corpo de Bombeiros</h1>
-                        </div>
-                        <div class="part-content" id="selection-content-2">
-                            <img src="/assets/imagens/home/samu.png" class="image-part" id="image-part-2">
-                            <h1 class="tittle-part" id="tittle-part-2">Samu</h1>
-                        </div>
-                        <div class="part-content" id="selection-content-3">
-                            <img src="/assets/imagens/home/Policia.png" class="image-part" id="image-part-3">
-                            <h1 class="tittle-part" id="tittle-part-3">Policia Militar</h1>
-                        </div>
+                        <a href="tel:193" role="button" class="button-call" id="bombeiros">
+                            <div class="part-content" id="selection-content-1">
+                                <img src="/assets/imagens/home/bombeiros.png" class="image-part" id="image-part-1">
+                                <h1 class="tittle-part" id="tittle-part-1">Corpo de Bombeiros</h1>
+                            </div>
+                        </a>
+                        <a href="tel:192" role="button" class="button-call" id="samu">
+                            <div class="part-content" id="selection-content-2">
+                                <img src="/assets/imagens/home/samu.png" class="image-part" id="image-part-2">
+                                <h1 class="tittle-part" id="tittle-part-2">Samu</h1>
+                            </div>
+                        </a>
+                        <a href="tel:190" role="button" class="button-call" id="policia">
+                            <div class="part-content" id="selection-content-3">
+                                <img src="/assets/imagens/home/Policia.png" class="image-part" id="image-part-3">
+                                <h1 class="tittle-part" id="tittle-part-3">Policia Militar</h1>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -137,5 +184,6 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+    <script src="/assets/java/mostrarImagem.js"></script>
+    <script src="/assets/java/buttoncall.js"></script>
 </body>
-<script src="/assets/java/mostrarImagem.js"></script>

@@ -5,6 +5,7 @@ const engasgo = document.querySelector("#carrossel-3");
 const option1 = document.querySelector("#option-1");
 const option2 = document.querySelector("#option-2");
 const option3 = document.querySelector("#option-3");
+const bannerFrame = document.getElementById("banner-frame");
 const back = document.querySelector("#arrow-icon-left");
 const front = document.querySelector("#arrow-icon-right");
 const coracaotittle = document.querySelector("#banner-tittle-text-1");
@@ -31,6 +32,7 @@ function selecionarAnterior() {
         engasgo.style.display = "none";
         engasgotittle.style.display = "none";
         option3.style.background = "white";
+        bannerFrame.style.background="rgba(138, 1, 1, 0.55)";
     }
     else if (option == 2) {
         coracao.style.display = "none";
@@ -42,6 +44,7 @@ function selecionarAnterior() {
         engasgo.style.display = "none";
         engasgotittle.style.display = "none";
         option3.style.background = "white";
+        bannerFrame.style.background="rgba(1, 138, 8, 0.55)";
     }
     else if (option == 3) {
         coracao.style.display = "none";
@@ -53,6 +56,7 @@ function selecionarAnterior() {
         engasgo.style.display = "flex";
         engasgotittle.style.display = "flex";
         option3.style.background = "black";
+        bannerFrame.style.background="rgba(1, 138, 138, 0.55)";
     }
 }
 function selecionarProximo() {
@@ -70,6 +74,7 @@ function selecionarProximo() {
         engasgo.style.display = "none";
         engasgotittle.style.display = "none";
         option3.style.background = "white";
+        bannerFrame.style.background="rgba(138, 1, 1, 0.55)";
     }
     else if (option == 2) {
         coracao.style.display = "none";
@@ -81,6 +86,7 @@ function selecionarProximo() {
         engasgo.style.display = "none";
         engasgotittle.style.display = "none";
         option3.style.background = "white";
+        bannerFrame.style.background="rgba(1, 138, 8, 0.55)";
     }
     else if (option == 3) {
         coracao.style.display = "none";
@@ -92,6 +98,7 @@ function selecionarProximo() {
         engasgo.style.display = "flex";
         engasgotittle.style.display = "flex";
         option3.style.background = "black";
+        bannerFrame.style.background="rgba(1, 138, 138, 0.55)";
     }
 }
 back.addEventListener("click", selecionarAnterior);

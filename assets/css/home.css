@@ -1,4 +1,5 @@
 *{
+    text-decoration: none;
     padding: 0;
     margin: 0;
     color: rgb(255, 255, 255);
@@ -13,7 +14,7 @@ body{
     width: 90%;
     justify-content: center;
     justify-items: center;
-    background: url(/assets/imagens/home/background.png);
+    background: linear-gradient(to bottom, rgb(0, 217, 255), rgb(86, 207, 255));
     background-size: cover;
     background-repeat: no-repeat;
     
@@ -21,7 +22,6 @@ body{
 header{
     margin-top: 0vw;
     padding: 1vw;
-    background: linear-gradient( rgba(99, 93, 93, 0.692),rgba(12, 73, 187, 0));
 }
 .header-frame{
     width: 100%;
@@ -56,6 +56,8 @@ header{
     width: auto;
 }
 #content-left-1{
+    justify-content: center;
+    justify-items: center;
     display: flex;
     cursor: pointer;
     width: 100%;
@@ -80,7 +82,30 @@ header{
     transform: translate(-10vw);
     font-size: 1vw;
 }
+.content{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    justify-items: center;
+}
 
+.content h3{
+    margin: 2vw 1vw;
+}
+.tittle-map{
+    margin: 1vw 0vw;
+    width: 90%;
+    font-size: 3vw;
+    align-items: center;
+    align-content: center;
+    background: rgba(255, 255, 255, 0.137);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+}
+.tittle-map img{
+    width: 6vw;
+}
 #selector-tittle{
     height: 0px;
     width: 0px;
@@ -116,6 +141,17 @@ header{
     justify-content: center;
     border: 1px solid black;
 }
+#map{
+    justify-content: center;
+    justify-items: center;
+    color: black;
+    padding: 1vw;
+    border: 1px solid black;
+    width: 30vw;
+    height: 30vw; /* ou o tamanho que quiser */
+    border-radius: 10px;
+    margin-top: 10px;
+}
 .header-element#middle{
     width: auto;
     height: auto;
@@ -130,14 +166,12 @@ header{
 }
 
 #frame-middle-1{
-    background: linear-gradient(0.45turn, rgba(0, 255, 145, 0.568), rgba(6, 175, 170, 0.521));
     padding: 2vw;
     width: 2vw;
     height: 2vw;
     border-radius: 10vw;
     animation: brilho 2s infinite;
     transition: 100ms;
-    border: 1px solid black;
 }
 #content-middle-1{
     
@@ -165,7 +199,7 @@ header{
 }
 #frame-middle-1:hover{
     cursor: pointer;
-    box-shadow: -0.1vw -0.1vw rgb(0, 217, 255);
+    box-shadow: -0.1vw -0.1vw rgb(84, 144, 155);
     transition: 500ms;
 }
 .header-element#right{
@@ -318,9 +352,9 @@ main{
     margin: 2vw 0vw;
  }
  #banner-frame{
-    background: rgba(0, 255, 145, 0.384);
+    background: rgba(138, 1, 1, 0.55);
     border: 2px solid rgb(146, 146, 146);
-    padding: 2vw;
+    padding: 1vw;
 }
  #banner-tittle{
     display: flex;
@@ -374,17 +408,20 @@ main{
 #disk-frame{
     margin-top: 4vw;
     border-radius: 1vw;
-    width: 90%;
+    width: 100%;
+    height: 100%;
     align-items: center;
     display: flex;
     background: rgba(0, 0, 0, 0.253);
 }
 #main-left-frame{
     height: 100%;
+    width: 50%;
+    display: flex;
 }
 #content-main-left-1{
-    height: 90%;
-    border: 1px solid black;
+    height: 100%;
+    width: 100%;
     align-items: center;
     align-content: center;
 }
@@ -399,10 +436,10 @@ main{
 }
 .part-frame{
     width: 50%;
+    height: 100%;
     justify-content: center;
     justify-items: center;
-  
-    padding: 1vw 1vw;
+    margin: 2vw 0vw;
 }
 #frame-main{
     border: 1px solid black;
@@ -420,18 +457,20 @@ main{
     border: 2px solid white;
 }
 .part-capsule{
-    width: 90%;  
+    justify-content: center;
+    justify-items: center;
+    width: 90%;
 }
 .part-content{
     width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: center;
+    justify-items: center;
     align-items: center;
     align-content: center;
-    background: rgba(248, 218, 69, 0.329);
+    background: rgba(255, 255, 255, 0.329);
     border-radius: 10px;
     margin-bottom: 1vw;
-    font-size: 1vw;
 }
 /* ------------------------------------------------------------------------------------ */
 
@@ -450,12 +489,11 @@ main{
      box-shadow: 0.1vw 0.1vw rgba(0, 0, 0, 0.445);
      transition: 400ms;
 }
-#tittle-part-1{
-    margin-left: 2vw;
-}
+
 .image-part{
+    justify-content: center;
+    justify-items: center;
     width: 5vw;
-    margin-left: 10%;
 }
 #selection-content-1:hover ~#tittle-part-1{
     width: 0vw;
@@ -477,11 +515,6 @@ main{
 #tittle-part-2{
     margin-left: 2vw;
 }
-.image-part{
-    width: 5vw;
-    margin-left: 10%;
-}
-
 #selection-content-3{
     padding: 1vw 0vw;
 }
@@ -496,10 +529,6 @@ main{
 }
 #tittle-part-3{
     margin-left: 2vw;
-}
-.image-part{
-    width: 5vw;
-    margin-left: 10%;
 }
 .part-content:hover~.tittle-part {
     animation:alternate tremer 1s infinite;
@@ -522,3 +551,4 @@ main{
         transition: 150ms;
     }
  }
+
