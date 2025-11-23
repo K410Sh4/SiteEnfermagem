@@ -1,105 +1,102 @@
 let option = 1;
-const coracao = document.querySelector("#carrossel-1");
-const veneno = document.querySelector("#carrossel-2");
-const engasgo = document.querySelector("#carrossel-3");
-const option1 = document.querySelector("#option-1");
-const option2 = document.querySelector("#option-2");
-const option3 = document.querySelector("#option-3");
+let autoplayInterval;
+
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+const title = document.getElementById("help-title");
 const bannerFrame = document.getElementById("banner-frame");
-const back = document.querySelector("#arrow-icon-left");
-const front = document.querySelector("#arrow-icon-right");
-const coracaotittle = document.querySelector("#banner-tittle-text-1");
-const venenotittle = document.querySelector("#banner-tittle-text-2");
-const engasgotittle = document.querySelector("#banner-tittle-text-3");
-option1.style.background = "white";
-option2.style.background = "white";
-option3.style.background = "white";
-coracao.style.display = "flex";
-coracaotittle.style.display = "flex";
-option1.style.background = "black";
-function selecionarAnterior() {
-    option = option - 1;
-    if (option == 0) {
-        option = 3;
+
+const arrowLeft = document.getElementById("arrow-left");
+const arrowRight = document.getElementById("arrow-right");
+
+const data = [
+    {
+        name: "Parada Cardíaca",
+        bg: "rgba(138, 1, 1, 0.55)"
+    },
+    {
+        name: "Envenenamento",
+        bg: "rgba(1, 138, 8, 0.55)"
+    },
+    {
+        name: "Engasgo",
+        bg: "rgba(1, 138, 138, 0.55)"
     }
-    if (option == 1) {
-        coracao.style.display = "flex";
-        coracaotittle.style.display = "flex";
-        option1.style.background = "black";
-        veneno.style.display = "none";
-        venenotittle.style.display = "none";
-        option2.style.background = "white";
-        engasgo.style.display = "none";
-        engasgotittle.style.display = "none";
-        option3.style.background = "white";
-        bannerFrame.style.background="rgba(138, 1, 1, 0.55)";
+];
+function typeWriter(text) {
+    title.textContent = "";
+    let i = 0;
+    const speed = 40;
+
+    function typing() {
+        if (i < text.length) {
+            title.textContent += text.charAt(i);
+            i++;
+            setTimeout(typing, speed);
+        }
     }
-    else if (option == 2) {
-        coracao.style.display = "none";
-        coracaotittle.style.display = "none";
-        option1.style.background = "white";
-        veneno.style.display = "flex";
-        venenotittle.style.display = "flex";
-        option2.style.background = "black";
-        engasgo.style.display = "none";
-        engasgotittle.style.display = "none";
-        option3.style.background = "white";
-        bannerFrame.style.background="rgba(1, 138, 8, 0.55)";
-    }
-    else if (option == 3) {
-        coracao.style.display = "none";
-        coracaotittle.style.display = "none";
-        option1.style.background = "white";
-        veneno.style.display = "none";
-        venenotittle.style.display = "none";
-        option2.style.background = "white";
-        engasgo.style.display = "flex";
-        engasgotittle.style.display = "flex";
-        option3.style.background = "black";
-        bannerFrame.style.background="rgba(1, 138, 138, 0.55)";
-    }
+    typing();
 }
-function selecionarProximo() {
-    option = option + 1;
-    if (option > 3) {
-        option = 1;
+function updateCarousel(direction = "right") {
+    slides.forEach(slide => {
+        slide.classList.remove("center", "enter-right", "enter-left", "active");
+    });
+
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    const index = option - 1;
+
+    const activeSlide = slides[index];
+    if (direction === "right") {
+        activeSlide.classList.add("enter-right");
+        setTimeout(() => activeSlide.classList.add("center"), 20);
+    } else {
+        activeSlide.classList.add("enter-left");
+        setTimeout(() => activeSlide.classList.add("center"), 20);
     }
-    if (option == 1) {
-        coracao.style.display = "flex";
-        coracaotittle.style.display = "flex";
-        option1.style.background = "black";
-        veneno.style.display = "none";
-        venenotittle.style.display = "none";
-        option2.style.background = "white";
-        engasgo.style.display = "none";
-        engasgotittle.style.display = "none";
-        option3.style.background = "white";
-        bannerFrame.style.background="rgba(138, 1, 1, 0.55)";
-    }
-    else if (option == 2) {
-        coracao.style.display = "none";
-        coracaotittle.style.display = "none";
-        option1.style.background = "white";
-        veneno.style.display = "flex";
-        venenotittle.style.display = "flex";
-        option2.style.background = "black";
-        engasgo.style.display = "none";
-        engasgotittle.style.display = "none";
-        option3.style.background = "white";
-        bannerFrame.style.background="rgba(1, 138, 8, 0.55)";
-    }
-    else if (option == 3) {
-        coracao.style.display = "none";
-        coracaotittle.style.display = "none";
-        option1.style.background = "white";
-        veneno.style.display = "none";
-        venenotittle.style.display = "none";
-        option2.style.background = "white";
-        engasgo.style.display = "flex";
-        engasgotittle.style.display = "flex";
-        option3.style.background = "black";
-        bannerFrame.style.background="rgba(1, 138, 138, 0.55)";
-    }
+
+    activeSlide.classList.add("active");
+
+    dots[index].classList.add("active");
+
+    typeWriter(data[index].name);
+
+    // Atualiza cor do fundo
+    bannerFrame.style.background = data[index].bg;
 }
-back.addEventListener("click", selecionarAnterior);
-front.addEventListener("click", selecionarProximo);
+arrowRight.onclick = () => {
+    option++;
+    if (option > slides.length) option = 1;
+    updateCarousel("right");
+    resetAutoplay();
+};
+
+arrowLeft.onclick = () => {
+    option--;
+    if (option < 1) option = slides.length;
+    updateCarousel("left");
+    resetAutoplay();
+};
+dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+        const id = Number(dot.dataset.id);
+        if (id !== option) {
+            const direction = id > option ? "right" : "left";
+            option = id;
+            updateCarousel(direction);
+            resetAutoplay();
+        }
+    });
+});
+function startAutoplay() {
+    autoplayInterval = setInterval(() => {
+        arrowRight.click();
+    }, 4000);
+}
+
+function resetAutoplay() {
+    clearInterval(autoplayInterval);
+    startAutoplay();
+}
+updateCarousel();
+startAutoplay();

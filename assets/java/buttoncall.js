@@ -1,29 +1,38 @@
 const buttons = document.querySelectorAll(".button-call");
 
 buttons.forEach(button => {
-  // ao carregar, esconde os títulos e centraliza
-  const title = button.querySelector(".tittle-part");
   const content = button.querySelector(".part-content");
-  
-  if (title && content) {
-    title.style.display = "none";
-    content.style.justifyContent = "center";
-    content.style.width = "30%";
-  }
+  const title = button.querySelector(".tittle-part");
+  const image = button.querySelector(".image-part");
 
-  // adiciona evento hover
-  button.addEventListener("mouseover", () => {
+  if (!content || !title || !image) return;
+
+  // estado inicial
+  title.style.display = "none";
+  title.style.opacity = "0";
+  image.style.marginRight = "0";
+
+  // quando entra no botão
+  button.addEventListener("mouseenter", () => {
     title.style.display = "flex";
+    setTimeout(() => {
+      title.style.opacity = "1";
+    }, 10);
+
     content.style.justifyContent = "space-around";
-    content.style.justifyItems = "center";
-    content.style.width = "100%";
+    image.style.marginRight = "10px";
   });
 
-  // quando o mouse sai, volta ao normal
-  button.addEventListener("mouseout", () => {
-    title.style.display = "none";
+  // quando sai do botão
+  button.addEventListener("mouseleave", () => {
+    title.style.opacity = "0";
+
+    // espera a opacidade desaparecer antes de esconder totalmente
+    setTimeout(() => {
+      title.style.display = "none";
+    }, 150);
+
     content.style.justifyContent = "center";
-    content.style.justifyItems = "center";
-    content.style.width = "30%";
+    image.style.marginRight = "0";
   });
 });

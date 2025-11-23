@@ -56,57 +56,54 @@
         </section>
     </header>
     <main class="main" id="frame-main">
-        <div class="banner" id="banner-frame">
-            <div class="banner" id="banner-tittle">
-                <img src="/assets/imagens/home/ajuda.png" alt="" id="help">
-                <h1>Área de Ajuda</h1>
-            </div>
-            <div class="banner" id="banner-content">
-                <div class="banner-tittle" id="banner-tittle-top">
-                    <h1 class="banner-tittle-text" id="banner-tittle-text-1">Parada Cadiaca</h1>
-                    <h1 class="banner-tittle-text" id="banner-tittle-text-2">Envenenamento</h1>
-                    <h1 class="banner-tittle-text" id="banner-tittle-text-3">Engasgo</h1>
+        <section id="help-section">
+            <div id="banner-frame">
+
+                <div id="banner-tittle">
+                    <h1 id="help-title">Carregando...</h1>
                 </div>
-                <div class="banner" id="banner-apresentation">
-                    <a href="/assets/pages/parada-cardiaca.html" class="item-carrossel" id="item-1">
-                        <img src="/assets/imagens/parada-cardiaca/paradacardiaca.png" alt="" class="option-carrossel"
-                            id="carrossel-1">
-                    </a>
-                    <a href="/assets/pages/envenenamento.html" class="item-carrossel" id="item-2">
-                        <img src="/assets/imagens/envenenamento/veneno.png" alt="" class="option-carrossel"
-                            id="carrossel-2">
-                    </a>
-                    <a href="/assets/pages/engasgo.html" class="item-carrossel" id="item-3">
-                        <img src="/assets/imagens/engasgo/engasgo.png" alt="" class="option-carrossel" id="carrossel-3">
-                    </a>
-                </div>
-                <div>
-                    <ul class="options-frame">
-                        <div class="arrow" id="arrow-left">
-                            <img src="/assets/imagens/home/left-arrow.png" alt="" class="arrow-icon"
-                                id="arrow-icon-left">
+
+                <div class="carrossel-container">
+
+                    <img src="arrow-left.png" class="arrow" id="arrow-left">
+
+                    <div class="carrossel-wrapper">
+
+                        <div class="slide" data-id="1">
+                            <img src="/assets/imagens/parada-cardiaca/paradacardiaca.png" class="slide-img">
                         </div>
-                        <div class="option-circle" id="option-1"></div>
-                        <div class="option-circle" id="option-2"></div>
-                        <div class="option-circle" id="option-3"></div>
-                        <div class="arrow" id="arrow-right">
-                            <img src="/assets/imagens/home/right-arrow.png" alt="" class="arrow-icon"
-                                id="arrow-icon-right">
+
+                        <div class="slide" data-id="2">
+                            <img src="/assets/imagens/envenenamento/veneno.png" class="slide-img">
                         </div>
-                    </ul>
+
+                        <div class="slide" data-id="3">
+                            <img src="/assets/imagens/engasgo/engasgo.png" class="slide-img">
+                        </div>
+
+                    </div>
+                    <img src="arrow-right.png" class="arrow" id="arrow-right">
+
                 </div>
+                <div class="dots">
+                    <div class="dot" data-id="1"></div>
+                    <div class="dot" data-id="2"></div>
+                    <div class="dot" data-id="3"></div>
+                </div>
+
             </div>
-        </div>
+        </section>
+
         <div class="disk-save" id="disk-frame">
             <div class="part-frame" id="main-left-frame">
                 <div class="content" id="content-main-left-1">
                     <div class="tittle-map">
-                        <img src="/assets/imagens/home/pingps.png" alt=""><h3>Sua localizacao</h3>
+                        <img src="/assets/imagens/home/pingps.png" alt="">
+                        <h3>Sua localizacao</h3>
                     </div>
                     <div id="map"></div>
                     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
                     <script>
-                        // cria mapa
                         const map = L.map('map').setView([0, 0], 2);
                         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                             maxZoom: 19,
